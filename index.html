@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Lovely Sister</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#ff9a9e,#fecfef,#f6d365);min-height:100vh;background-size:300% 300%;animation:bg 8s ease infinite}
+@keyframes bg{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.container{max-width:430px;margin:0 auto;padding:14px}
+.card{background:rgba(255,255,255,0.97);border-radius:26px;padding:26px 20px;margin:14px 0;box-shadow:0 10px 30px rgba(255,46,120,0.18);text-align:center}
+h1{font-family:'Dancing Script',cursive;color:#ff2e78;font-size:36px}
+.tag{color:#ff5a92;font-weight:600;margin:6px 0 12px}
+p{color:#555;line-height:1.7;font-size:14.5px}
+.heart{font-size:70px;animation:beat 1s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.18)}}
+.btn{width:100%;padding:14px;margin:8px 0;border:none;border-radius:50px;background:linear-gradient(45deg,#ff2e78,#ff8fab);color:white;font-size:15px;font-weight:600;cursor:pointer;box-shadow:0 4px 12px rgba(255,46,120,0.25)}
+.btn2{background:white;color:#ff2e78;border:2px solid #ffb3c8}
+.btn-small{display:inline-block;width:48%;padding:12px;margin:4px 1%;font-size:13px}
+.page{display:none}.page.active{display:block;animation:up .4s}
+@keyframes up{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+.note{background:#fff0f5;padding:13px;border-radius:14px;border-left:4px solid #ff2e78;margin:10px 0;text-align:left;font-size:13.5px}
+.gallery img{width:100%;border-radius:16px;margin:7px 0;height:200px;object-fit:cover}
+.fall{position:fixed;top:-20px;pointer-events:none;animation:fall linear forwards;z-index:999}
+@keyframes fall{to{transform:translateY(105vh) rotate(360deg);opacity:0}}
+.menu{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:10px 0}
+.emoji-box{font-size:32px;margin:10px 0}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- PAGE 1 HOME -->
+<div id="home" class="page active">
+<div class="card">
+<div class="heart">💖</div>
+<h1>My Lovely Sister</h1>
+<div class="tag">Meri Pyari Behna Ke Naam</div>
+<p>Tum duniya ki sabse achi, pyari aur khoobsurat behen ho! ❤️</p>
+<div class="menu">
+<button class="btn btn-small" onclick="showPage('love')">💌 Mohabbat</button>
+<button class="btn btn-small" onclick="showPage('gallery')">📸 Yaadein</button>
+<button class="btn btn-small" onclick="showPage('dua')">🤲 Dua</button>
+<button class="btn btn-small" onclick="showPage('surprise')">🎁 Surprise</button>
+</div>
+<button class="btn btn2" onclick="hearts()">💞 Dil Barsao</button>
+</div>
+</div>
+
+<!-- PAGE 2 LOVE -->
+<div id="love" class="page">
+<div class="card">
+<h1>💌 Meri Mohabbat</h1>
+<div class="note">Tum meri zindagi ka sabse pyara tohfa ho. Tumhari ek muskurahat se mera sara din acha ho jata hai.</div>
+<p>Bachpan me hum kitna ladte the, par ek pal me maan bhi jate the. Tumhare bina ghar suna suna lagta hai.</p>
+<div class="note">Tum sirf behen nahi, meri sabse achi dost bhi ho. Har baat jo main kisi se nahi keh sakta, tumse keh leta hun.</div>
+<button class="btn" onclick="showPage('dua')">Aage Dua Padho 🤲</button>
+<button class="btn btn2" onclick="showPage('home')">🏠 Home</button>
+</div>
+</div>
+
+<!-- PAGE 3 GALLERY -->
+<div id="gallery" class="page">
+<div class="card">
+<h1>📸 Hamari Yaadein</h1>
+<p>Hamare pyare lamhe</p>
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=500" style="height:240px">
+<div style="display:flex;gap:7px">
+<img src="https://images.unsplash.com/photo-1526510747491-58f928ec870f?w=300" style="width:50%;height:160px">
+<img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=300" style="width:50%;height:160px">
+</div>
+<div class="note">Yahan tum apni behen ki real photos laga sakte ho. Mujhe bhejo main laga dunga!</div>
+<button class="btn" onclick="showPage('surprise')">Surprise Dekho 🎁</button>
+<button class="btn btn2" onclick="showPage('home')">🏠 Home</button>
+</div>
+</div>
+
+<!-- PAGE 4 DUA -->
+<div id="dua" class="page">
+<div class="card">
+<h1>🤲 Meri Dua</h1>
+<div class="emoji-box">✨🤲✨</div>
+<div class="note">Allah tumhe hamesha khush rakhe, har gham se door rakhe, tumhari har jaiz dua qubool kare.</div>
+<p>Allah tumhe lambi umar de, sehat de, izzat de aur tumhe kabhi kisi cheez ki kami na ho.</p>
+<div class="note">Tum jahan bhi raho, khush raho, abaad raho. Tumhari zindagi me sirf khushiyan hi khushiyan hon. Ameen! ❤️</div>
+<p style="color:#ff2e78;font-weight:700;margin-top:10px">Tum meri har dua me ho!</p>
+<button class="btn" onclick="showPage('surprise')">Ab Surprise 🎁</button>
+<button class="btn btn2" onclick="showPage('home')">🏠 Home</button>
+</div>
+</div>
+
+<!-- PAGE 5 SURPRISE -->
+<div id="surprise" class="page">
+<div class="card">
+<h1>🎁 Ek Wada</h1>
+<div class="emoji-box">👫💖</div>
+<p style="font-size:16px;font-weight:600;color:#ff2e78">Mera Tumse Wada Hai!</p>
+<div class="note">Chahe kuch bhi ho jaye, tumhara ye bhai hamesha tumhare saath khada rahega. Tum akeli kabhi nahi ho.</div>
+<p>Tumhe koi bhi pareshani ho, koi bhi baat ho, sabse pehle apne bhai ko batana. Main duniya se lad jaunga tumhare liye.</p>
+<div class="note">Tum meri izzat ho, mera maan ho, mera guroor ho. I Love You Meri Pyari Behna! ❤️❤️❤️</div>
+<button class="btn" onclick="hearts();alert('I Love You Behna! ❤️💖💞')">I Love You Bolo 💖</button>
+<button class="btn btn2" onclick="showPage('home')">🏠 Sabse Pehle Wapas</button>
+</div>
+</div>
+
+</div>
+<script>
+function showPage(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo(0,0);}
+function hearts(){for(let i=0;i<30;i++){let d=document.createElement('div');d.className='fall';d.innerHTML=['💖','💕','💞','❤️','🌸'][Math.floor(Math.random()*5)];d.style.left=Math.random()*100+'vw';d.style.fontSize=(18+Math.random()*24)+'px';d.style.animationDuration=(2+Math.random()*3)+'s';document.body.appendChild(d);setTimeout(()=>d.remove(),5000);}}
+</script>
+</body>
+</html>

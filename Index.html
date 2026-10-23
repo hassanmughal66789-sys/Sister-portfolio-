@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Sweetest Sister - Nazi</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(135deg,#ff9a9e 0%,#fecfef 50%,#fecfef 100%);min-height:100vh;overflow-x:hidden}
+.container{max-width:450px;margin:0 auto;padding:20px}
+.card{background:rgba(255,255,255,0.95);border-radius:30px;padding:30px 25px;margin:20px 0;box-shadow:0 15px 35px rgba(255,78,138,0.2);text-align:center;animation:slideUp 0.6s ease}
+@keyframes slideUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+h1{font-family:'Dancing Script',cursive;color:#ff4e8a;font-size:38px;margin-bottom:10px}
+h2{color:#ff4e8a;font-size:24px;margin:15px 0}
+p{color:#555;line-height:1.8;font-size:16px}
+.heart-main{font-size:70px;animation:beat 1s infinite}
+@keyframes beat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.btn{display:block;width:100%;padding:14px;margin:12px 0;border:none;border-radius:50px;background:linear-gradient(45deg,#ff4e8a,#ff8fab);color:white;font-size:17px;font-weight:600;box-shadow:0 5px 15px rgba(255,78,138,0.4)}
+.btn:active{transform:scale(0.97)}
+.page{display:none}
+.page.active{display:block}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:20px 0}
+.gallery img{width:100%;height:150px;object-fit:cover;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,0.1)}
+.gallery img.full{grid-column:span 2;height:220px}
+.note{background:#fff0f5;padding:15px;border-radius:15px;border-left:5px solid #ff4e8a;margin:15px 0;text-align:left;font-style:italic}
+.floating{position:fixed;pointer-events:none;animation:fall linear forwards;z-index:999}
+@keyframes fall{to{transform:translateY(105vh) rotate(360deg);opacity:0}}
+.back-btn{background:white;color:#ff4e8a;border:2px solid #ff4e8a}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HOME -->
+<div id="home" class="page active">
+<div class="card">
+<div class="heart-main">💖</div>
+<h1>My Lovely Sister</h1>
+<p style="color:#ff4e8a;font-weight:600">Meri Pyari Behna Nazi Ke Naam</p>
+<p style="margin-top:15px">Tum duniya ki sabse khoobsurat aur achi behen ho!</p>
+<button class="btn" onclick="showPage('love')">💌 Meri Mohabbat</button>
+<button class="btn" onclick="showPage('gallery')">
